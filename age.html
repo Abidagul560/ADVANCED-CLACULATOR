@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Age Calculator — Calcify</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="site-logo"><span class="logo-badge">🧮</span> Calcify</a>
+  <a href="index.html" class="nav-back">← All Calculators</a>
+</nav>
+
+<div class="page">
+  <div class="page-hero">
+    <h1>🎂 Age Calculator</h1>
+    <p>Find your exact age in years, months, and days — plus the total number of days you've been alive.</p>
+  </div>
+
+  <div class="calc-card">
+    <div class="input-group">
+      <label>Date of Birth</label>
+      <input type="date" id="dob">
+    </div>
+    <button class="calc-btn" onclick="calcAge()">Calculate Age</button>
+
+    <div class="result-box" id="ageResult">
+      <div class="result-main" id="ageMain">0 years</div>
+      <div class="result-line"><span>Months</span><span id="ageMonths">0</span></div>
+      <div class="result-line"><span>Days</span><span id="ageDays">0</span></div>
+      <div class="result-line"><span>Total Days Lived</span><span id="ageTotalDays">0</span></div>
+    </div>
+  </div>
+
+  <article class="content-article">
+    <h2>How to Use</h2>
+    <ol>
+      <li>Select your date of birth using the date picker.</li>
+      <li>Click Calculate Age.</li>
+      <li>Your exact age and total days lived will appear instantly.</li>
+    </ol>
+
+    <h2>Formula</h2>
+    <div class="formula-box">Age = Current Date − Date of Birth (broken into years, months, days)</div>
+
+    <h2>Example</h2>
+    <div class="example-box">
+      <strong>Q:</strong> Born on 15 March 2000 — how old are they in 2026?<br>
+      <strong>A:</strong> Approximately <strong>26 years, 6 months</strong> (depending on today's date).
+    </div>
+
+    <h2>FAQs</h2>
+    <details class="faq-item">
+      <summary>Does this account for leap years?</summary>
+      <p>Yes, the calculation is based on actual calendar dates, so leap years are automatically handled correctly.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Can I calculate age as of a future date?</summary>
+      <p>This calculator computes age as of today's date. For a custom target date, the underlying logic can easily be adapted.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Is my birth date stored anywhere?</summary>
+      <p>No. All calculations happen instantly in your browser — nothing is saved or sent anywhere.</p>
+    </details>
+
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="bmi.html" class="related-card">BMI Calculator<span>Check your health category</span></a>
+      <a href="percentage.html" class="related-card">Percentage Calculator<span>Find percentages instantly</span></a>
+    </div>
+  </article>
+</div>
+
+<footer class="site-footer">© 2026 Calcify. All calculators are free to use.</footer>
+
+<script src="age.js"></script>
+</body>
+</html>

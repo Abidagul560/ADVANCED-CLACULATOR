@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>BMI Calculator — Calcify</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav class="site-nav">
+  <a href="index.html" class="site-logo"><span class="logo-badge">🧮</span> Calcify</a>
+  <a href="index.html" class="nav-back">← All Calculators</a>
+</nav>
+
+<div class="page">
+  <div class="page-hero">
+    <h1>⚖️ BMI Calculator</h1>
+    <p>Calculate your Body Mass Index (BMI) and see which health category you fall into.</p>
+  </div>
+
+  <div class="calc-card">
+    <div class="input-row">
+      <div class="input-group">
+        <label>Weight (kg)</label>
+        <input type="number" id="bmiWeight" placeholder="e.g. 70">
+      </div>
+      <div class="input-group">
+        <label>Height (cm)</label>
+        <input type="number" id="bmiHeight" placeholder="e.g. 175">
+      </div>
+    </div>
+    <button class="calc-btn" onclick="calcBMI()">Calculate BMI</button>
+
+    <div class="result-box" id="bmiResult">
+      <div class="result-main" id="bmiMain">0</div>
+      <div class="result-line"><span>Category</span><span id="bmiCategory">—</span></div>
+    </div>
+  </div>
+
+  <article class="content-article">
+    <h2>How to Use</h2>
+    <ol>
+      <li>Enter your weight in kilograms.</li>
+      <li>Enter your height in centimeters.</li>
+      <li>Click Calculate BMI to see your result and category.</li>
+    </ol>
+
+    <h2>Formula</h2>
+    <div class="formula-box">BMI = Weight (kg) ÷ [Height (m)]²</div>
+
+    <h2>Example</h2>
+    <div class="example-box">
+      <strong>Q:</strong> Weight = 70 kg, Height = 175 cm (1.75 m)<br>
+      <strong>A:</strong> BMI = 70 ÷ (1.75 × 1.75) = <strong>22.9 (Normal weight)</strong>
+    </div>
+
+    <h2>BMI Categories</h2>
+    <ul>
+      <li>Below 18.5 — Underweight</li>
+      <li>18.5 – 24.9 — Normal weight</li>
+      <li>25 – 29.9 — Overweight</li>
+      <li>30 and above — Obese</li>
+    </ul>
+
+    <h2>FAQs</h2>
+    <details class="faq-item">
+      <summary>Is BMI accurate for everyone?</summary>
+      <p>BMI is a general screening tool and doesn't account for muscle mass, bone density, or body composition. It should not replace professional medical advice.</p>
+    </details>
+    <details class="faq-item">
+      <summary>Does this work for children?</summary>
+      <p>This calculator uses the standard adult BMI formula. Children and teens require age- and gender-specific BMI charts.</p>
+    </details>
+    <details class="faq-item">
+      <summary>What units does this calculator use?</summary>
+      <p>Weight in kilograms and height in centimeters.</p>
+    </details>
+
+    <h2>Related Calculators</h2>
+    <div class="related-grid">
+      <a href="age.html" class="related-card">Age Calculator<span>Find your exact age</span></a>
+      <a href="percentage.html" class="related-card">Percentage Calculator<span>Find percentages instantly</span></a>
+    </div>
+  </article>
+</div>
+
+<footer class="site-footer">© 2026 Calcify. All calculators are free to use.</footer>
+
+<script src="bmi.js"></script>
+</body>
+</html>
